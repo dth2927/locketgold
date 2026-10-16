@@ -13,7 +13,7 @@ if (ua.includes("Locket")) {
     obj.entries = obj.entries || {};
 
     // ============================================================
-    // 1. POPUP KÍCH HOẠT GOLD (@dth2927) & CẤU HÌNH TÍNH NĂNG
+    // 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL (THEO BẢN DTH2927)
     // ============================================================
     Object.assign(obj.entries, {
         feature_gates: JSON.stringify({
@@ -72,7 +72,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 2. CHẶN QUẢNG CÁO & VÔ HIỆU HÓA TRACKING
+    // 2. CHẶN QUẢNG CÁO & TẮT TRACKING (SENTRY)
     // ============================================================
     Object.assign(obj.entries, {
         history_ads_mode: "off",
@@ -93,9 +93,9 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 3. VIDEO 45S, BITRATE 1.2MBPS & DUNG LƯỢNG TẢI 100MB
+    // 3. CAMERA, VIDEO (30S CHUẨN SERVER / BITRATE 0.9MBPS) & DUNG LƯỢNG 100MB
     // ============================================================
-    var MY_VIDEO_DURATION = 45.0;
+    var MY_VIDEO_DURATION = 30.0;
     var durationStr = MY_VIDEO_DURATION.toString();
     var MAX_FILE_BYTES = 104857600; // 100MB
 
@@ -112,8 +112,8 @@ if (ua.includes("Locket")) {
         telephoto: true,
         srgb: true,
         lanczos: true,
-        quality_mbps: 1.2,
-        qualityMbps: 1.2
+        quality_mbps: 0.9,
+        qualityMbps: 0.9
     };
 
     var cameraRollConfig = {
@@ -130,8 +130,8 @@ if (ua.includes("Locket")) {
         max_file_size: MAX_FILE_BYTES,
         max_upload_bytes: MAX_FILE_BYTES,
         max_size_bytes: MAX_FILE_BYTES,
-        quality_mbps: 1.2,
-        qualityMbps: 1.2,
+        quality_mbps: 0.9,
+        qualityMbps: 0.9,
         flash_button: true
     };
 
@@ -184,7 +184,7 @@ if (ua.includes("Locket")) {
         goldMaxDuration: durationStr,
         max_file_size: MAX_FILE_BYTES.toString(),
         max_upload_bytes: MAX_FILE_BYTES.toString(),
-        video_quality_mbps: "1.2",
+        video_quality_mbps: "0.9",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
@@ -301,21 +301,21 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
 
-        // Link khung sự kiện mới
+        // Link sự kiện ImgBB
         widget_frame_event: JSON.stringify({
             uid: "midautumn_2026",
-            url: "https://ibb.co/gLBW5b0K",
+            url: "https://i.ibb.co/Tq4Djt47/1fa5c721-8f4f-4269-9ab0-89bf9fc1cc09-1-1.png",
             use_local_time_zone: true,
             placement: "below",
             start_at: "2020-01-01T00:00:00",
             end_at: "2099-12-31T23:59:59"
         }),
 
-        // Mở khóa tính năng Custom Widget Frame
+        // Mở tính năng Custom Frame
         custom_widget_frames: "enabled",
         custom_widget_frames_enabled: "true",
 
-        // Thiết lập khung Hoàng gia VIP Gold
+        // Cấu hình khung Hoàng gia VIP
         widget_frames_config: JSON.stringify({
             enabled: true,
             allow_custom_frames: true,
@@ -336,14 +336,12 @@ if (ua.includes("Locket")) {
             ]
         }),
 
-        // Danh sách ID khung hiển thị trong bộ chọn
         widget_frame_styles: JSON.stringify([
             "royal_gold_vip",
             "gold_luxury",
             "classic"
         ]),
 
-        // Cấu hình Seasonal Frames
         seasonal_frames_config: JSON.stringify({
             enabled: true,
             auto_rotate: false,
@@ -379,7 +377,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 7. CDN TĂNG TỐC, BỘ NHỚ ĐỆM CACHE & LƯU TRỮ ĐẦY ĐỦ
+    // 7. HỆ THỐNG CDN, CACHE & STORAGE ĐẦY ĐỦ
     // ============================================================
     Object.assign(obj.entries, {
         cdn_domain_replacements: JSON.stringify({
@@ -550,7 +548,6 @@ if (ua.includes("Locket")) {
             {
                 section: "🎨 Decorative by Locket",
                 items: [
-                    // Caption tiếng Hàn
                     {
                         overlay_id: "caption:toi_nho_em",
                         source: "remote",
