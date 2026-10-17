@@ -304,7 +304,7 @@ if (ua.includes("Locket")) {
         // Link sự kiện ImgBB
         widget_frame_event: JSON.stringify({
             uid: "midautumn_2026",
-            url: "https://i.ibb.co/rR66p09j/1792203427418-51238425216241447-1744175342587368869-0e72a9a4841f4be73a1b6a0e24673ff3.png",
+            url: "https://i.ibb.co/p6CBMqQ3/t-i-xu-ng.png",
             use_local_time_zone: true,
             placement: "below",
             start_at: "2020-01-01T00:00:00",
