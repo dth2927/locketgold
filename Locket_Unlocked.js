@@ -93,7 +93,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 3. CAMERA, VIDEO (45S / 1.2MBPS) & DUNG LƯỢNG TẢI (100MB)
+    // 3. CAMERA, VIDEO (45S / 0.6MBPS) & DUNG LƯỢNG TẢI (100MB)
     // ============================================================
     var MY_VIDEO_DURATION = 45.0;
     var durationStr = MY_VIDEO_DURATION.toString();
@@ -304,7 +304,7 @@ if (ua.includes("Locket")) {
         // Link sự kiện mới theo yêu cầu
         widget_frame_event: JSON.stringify({
             uid: "midautumn_2026",
-            url: "https://i.ibb.co/p6CBMqQ3/t-i-xu-ng.png",
+            url: "https://i.ibb.co/zV41vyJ2/t-i-xu-ng-1.png",
             use_local_time_zone: true,
             placement: "below",
             start_at: "2020-01-01T00:00:00",
