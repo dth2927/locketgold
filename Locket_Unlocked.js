@@ -93,11 +93,11 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 3. CAMERA, VIDEO (45S / BITRATE 0.6MBPS) & DUNG LƯỢNG 100MB
+    // 3. CAMERA, VIDEO (45S / 1.2MBPS) & DUNG LƯỢNG TẢI (100MB)
     // ============================================================
     var MY_VIDEO_DURATION = 45.0;
     var durationStr = MY_VIDEO_DURATION.toString();
-    var MAX_FILE_BYTES = 104857600; // 100MB
+    var MAX_SIZE_BYTES = 104857600; // 100MB
 
     var cameraConfig = {
         gold_max_duration: MY_VIDEO_DURATION,
@@ -127,9 +127,9 @@ if (ua.includes("Locket")) {
         trimMaxDuration: MY_VIDEO_DURATION,
         camera_roll_max_duration: MY_VIDEO_DURATION,
         camera_roll_video_max_duration: MY_VIDEO_DURATION,
-        max_file_size: MAX_FILE_BYTES,
-        max_upload_bytes: MAX_FILE_BYTES,
-        max_size_bytes: MAX_FILE_BYTES,
+        max_file_size: MAX_SIZE_BYTES,
+        max_upload_bytes: MAX_SIZE_BYTES,
+        max_size_bytes: MAX_SIZE_BYTES,
         quality_mbps: 0.6,
         qualityMbps: 0.6,
         flash_button: true
@@ -182,8 +182,8 @@ if (ua.includes("Locket")) {
         trim_max_duration: durationStr,
         gold_max_duration: durationStr,
         goldMaxDuration: durationStr,
-        max_file_size: MAX_FILE_BYTES.toString(),
-        max_upload_bytes: MAX_FILE_BYTES.toString(),
+        max_file_size: MAX_SIZE_BYTES.toString(),
+        max_upload_bytes: MAX_SIZE_BYTES.toString(),
         video_quality_mbps: "0.6",
         video_sound_enabled: "true",
         microphone_enabled: "true",
@@ -198,7 +198,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 4. BẠN BÈ & KHÔNG GIỚI HẠN
+    // 4. BẠN BÈ, GIỚI HẠN & ĐỀ XUẤT KẾT BẠN
     // ============================================================
     Object.assign(obj.entries, {
         max_friends_count: "999999",
@@ -290,7 +290,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 6. KHUNG SỰ KIỆN LINK MỚI & CUSTOM KHUNG HOÀNG GIA VIP
+    // 6. WIDGET SỰ KIỆN MỚI & KHUNG HOÀNG GIA (ROYAL GOLD)
     // ============================================================
     Object.assign(obj.entries, {
         widget_frame_event_max_images: "10",
@@ -301,7 +301,7 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
 
-        // Link sự kiện ImgBB
+        // Link sự kiện mới theo yêu cầu
         widget_frame_event: JSON.stringify({
             uid: "midautumn_2026",
             url: "https://i.ibb.co/p6CBMqQ3/t-i-xu-ng.png",
@@ -311,11 +311,11 @@ if (ua.includes("Locket")) {
             end_at: "2099-12-31T23:59:59"
         }),
 
-        // Mở tính năng Custom Frame
+        // Kích hoạt tính năng Custom Widget Frame trong Locket Gold
         custom_widget_frames: "enabled",
         custom_widget_frames_enabled: "true",
 
-        // Cấu hình khung Hoàng gia VIP
+        // Cấu hình kho khung tĩnh VIP Gold tùy chỉnh (Khung hoàng gia)
         widget_frames_config: JSON.stringify({
             enabled: true,
             allow_custom_frames: true,
@@ -336,12 +336,14 @@ if (ua.includes("Locket")) {
             ]
         }),
 
+        // Danh sách ID khung đè vào menu chọn widget
         widget_frame_styles: JSON.stringify([
             "royal_gold_vip",
             "gold_luxury",
             "classic"
         ]),
 
+        // Cấu hình sự kiện / Seasonal Frames
         seasonal_frames_config: JSON.stringify({
             enabled: true,
             auto_rotate: false,
@@ -420,7 +422,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 8. OVERLAY, CAPTION TIẾNG HÀN & ĐỦ 36 CAPTION TIKTOK GỐC
+    // 8. OVERLAY & TOÀN BỘ CAPTION GỐC (36 TIKTOK + TIẾNG HÀN)
     // ============================================================
     Object.assign(obj.entries, {
         overlay_navigator_enabled: "true",
@@ -548,6 +550,7 @@ if (ua.includes("Locket")) {
             {
                 section: "🎨 Decorative by Locket",
                 items: [
+                    // Caption tiếng Hàn bổ sung
                     {
                         overlay_id: "caption:toi_nho_em",
                         source: "remote",
@@ -626,7 +629,7 @@ if (ua.includes("Locket")) {
                 ]
             },
             {
-                section: "🎨 Cá nhân & Bạn bè",
+                section: "🎨 Độc lạ & Cá nhân",
                 items: [
                     {
                         overlay_id: "caption:dth2927",
@@ -858,7 +861,7 @@ if (ua.includes("Locket")) {
                         }
                     },
                     {
-                        overlay_id: "caption:luc_na_co_tien_thi_moi_di_a",
+                        overlay_id: "caption:luc_nao_co_tien_thi_moi_di_a",
                         source: "remote",
                         caption: {
                             background: { colors: ["#0F2027", "#203A43", "#2C5364"] },
@@ -1124,7 +1127,7 @@ if (ua.includes("Locket")) {
                 ]
             },
             {
-                section: "🎨 Trend TikTok (36 Caption gốc)",
+                section: "🎨 Trend TikTok (36 Caption)",
                 items: [
                     {
                         overlay_id: "caption:hoi_chieu_troi_mua",
