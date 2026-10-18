@@ -445,7 +445,7 @@ if (ua.includes("Locket")) {
         ]),
         overlay_items: JSON.stringify([
             {
-                section: "🎨 Tình yêu & Cơm chó 💕 (Bổ sung)",
+                section: "🎨 Tình yêu & Cơm chó 💕",
                 items: [
                     {
                         overlay_id: "caption:em_nho_anhh",
